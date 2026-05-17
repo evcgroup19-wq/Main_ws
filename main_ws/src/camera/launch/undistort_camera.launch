@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="camera" type="undistort_camera.py" name="undistort_camera" output="screen"/>
+</launch>

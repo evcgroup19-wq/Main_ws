@@ -1,0 +1,28 @@
+<launch>
+    <!-- ==================================================================== -->
+    <!-- 1. CAMERA PIPELINE                                                   -->
+    <!-- ==================================================================== -->
+
+    <!-- Launch the base camera node -->
+    <include file="$(find camera)/launch/camera.launch" />
+
+    <!-- Launch the undistort camera node to process the raw image feed -->
+    <node pkg="camera" type="undistort_camera.py" name="undistort_camera_node" output="screen" />
+
+
+    <!-- ==================================================================== -->
+    <!-- 2. ACTUATORS & CONTROL                                               -->
+    <!-- ==================================================================== -->
+
+    <!-- Include Motor Control Launch -->
+    <include file="$(find Motor_Control)/launch/Motor_control.launch" />
+
+
+    <!-- ==================================================================== -->
+    <!-- 3. MACHINE LEARNING APPLICATION                                      -->
+    <!-- ==================================================================== -->
+
+    <!-- Launch the main ML application script -->
+    <node pkg="ML_app" type="ML_app.py" name="ml_application_node" output="screen" />
+
+</launch>

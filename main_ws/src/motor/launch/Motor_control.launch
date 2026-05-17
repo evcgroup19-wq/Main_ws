@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="motor" type="motor_control.py" name="motor_control" output="screen"/>
+</launch>

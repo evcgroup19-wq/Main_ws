@@ -1,0 +1,8 @@
+prefix=/home/jetbot/main_ws/devel
+
+Name: ML_app
+Description: Description of ML_app
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

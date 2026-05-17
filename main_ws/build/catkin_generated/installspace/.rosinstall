@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jetbot/main_ws/install/setup.sh

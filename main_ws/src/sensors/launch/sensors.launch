@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="sensors" type="encoder_reader.py" name="encoder_reader" output="screen"/>
+  <node pkg="sensors" type="imu_reader.py" name="imu_reader" output="screen"/>
+  <node pkg="sensors" type="tof_reader.py" name="tof_reader" output="screen"/>
+</launch>
